@@ -1,0 +1,41 @@
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model MenuCategory {
+  id        Int     @id @default(autoincrement())
+  name      String
+  showOnHome    Boolean @default(true)
+}
+
+model MenuItem {
+  id Int @id @default(autoincrement())
+  name      String
+  description String
+  price Int
+  vegan Boolean @default(false)
+  hint String
+  menuCategory MenuCategory  @relation(fields: [menuCategoryId], references: [id])
+  menuCategoryId Int
+}
+
+model Post {
+  id        Int     @id @default(autoincrement())
+  title     String
+  content   String?
+  published Boolean @default(false)
+  author    User?   @relation(fields: [authorId], references: [id])
+  authorId  Int?
+}
+
+model User {
+  id    Int     @id @default(autoincrement())
+  email String  @unique
+  name  String?
+  posts Post[]
+}

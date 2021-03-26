@@ -1,11 +1,13 @@
 import Head from 'next/head'
 import Link from 'next/link'
 
+export const config = { amp: true }
+
 export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Create Next App</title>
+        <title>Hai-Nam Asia Imbiss bei Aachen Hbf</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
