@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 
-export const config = { amp: true }
+export const config = { amp: false }
 
 export default function Home() {
   return (
