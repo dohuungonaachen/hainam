@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "db": "ts-node scripts.ts"
+    "db": "ts-node pages/scripts.ts"
   },
   "dependencies": {
     "@prisma/client": "^2.19.0",
