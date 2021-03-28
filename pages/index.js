@@ -129,7 +129,7 @@ export default function Home() {
           justify-content: center;
           flex-wrap: wrap;
 
-          max-width: 800px;
+          max-width: 100vw;
           margin-top: 3rem;
         }
 
@@ -169,7 +169,7 @@ export default function Home() {
 
         @media (max-width: 600px) {
           .grid {
-            width: 100%;
+            width: 100vw;
             flex-direction: column;
           }
         }
